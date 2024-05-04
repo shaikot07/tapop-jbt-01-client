@@ -2,15 +2,16 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import MyLoading from "../../../Component/MyLoading";
 import { FaSignOutAlt, FaTasks, FaUser } from "react-icons/fa";
+import useAuth from "../../../Hooks/useAuth";
 
 
 const NavBar = () => {
+    const {  user, setUser,loading,setLoading,logOut, } = useAuth()
     const [isProfileOpen, setIsProfileOpen] = useState(false)
     // const [isTop, setIsTop] = useState(true)
     const profileRef = useRef(null);
-    // const myProfile = user?.email
-    const [user, setUser] = useState('shaikot')
-    const loading = false
+    const myProfile = user?.email
+   
     useEffect(() => {
         const handleOutsideClick = (event) => {
             if (profileRef.current && !profileRef.current.contains(event.target)) {

@@ -23,7 +23,7 @@ import Registration from "../pages/UserRegistration/Registration";
             element:<Login></Login>
         },
         {
-            path:"'/register'",
+            path:"/register",
             element:<Registration></Registration>
         },
     ]
