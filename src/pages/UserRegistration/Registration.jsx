@@ -13,9 +13,9 @@ import registrationLoadingLottie from "../../../public/assets/lottieAnimation/re
 import successRegistrationLottie from "../../../public/assets/lottieAnimation/successfully-registration-lottie.json";
 
 // img hosting  api and key 
-const imageHostingKey= import.meta.env.VITE_Image_Hosting_Key;
+const imageHostingKey = import.meta.env.VITE_Image_Hosting_Key;
 const imageHostingApi = `https://api.imgbb.com/1/upload?key=${imageHostingKey}`
-console.log('this is img hosting key',imageHostingKey, imageHostingApi);
+console.log('this is img hosting key', imageHostingKey, imageHostingApi);
 const Registration = () => {
     const navigate = useNavigate()
     const { user, loading, setLoading, createUser, updatedUserProfile, } = useAuth()
@@ -25,6 +25,7 @@ const Registration = () => {
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
     const axiosPublic = useAxiosPublic()
+    const [newErr,setNewErr]=useState("")
 
     // If user not exist, then redirect to homepage
     useEffect(() => {
@@ -97,7 +98,7 @@ const Registration = () => {
                                 console.log(err);
                             });
                     })
-                    .catch((error) => { setLoading(false), console.log(error) });
+                    .catch((error) => { setLoading(false), setNewErr(error,) });
             })
             .catch((error) => { setLoading(false), console.log(error) });
     }
@@ -260,7 +261,7 @@ const Registration = () => {
                         )}
                         {error && <p className="text-red-500">*{error}</p>}
                         {success && <p className="text-green-500">{success}</p>}
-
+                        <p className="text-red-500">{newErr && newErr.message}</p>
                         <button
                             className={`my-btn-one w-full ${loading && "!bg-opacity-10"}`}
                             type="submit"
@@ -268,6 +269,7 @@ const Registration = () => {
                         >
                             Signup
                         </button>
+                        <p className="text-3xl text-red-700">{error}</p>
                         <p className="text-sm font-light text-slate-300">
                             Already have an account?{" "}
                             <Link

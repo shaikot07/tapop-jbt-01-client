@@ -28,7 +28,7 @@ const NavBar = () => {
 
     // handle signout fuc
     const handleSignoutFunc = () => {
-        // logOut().then(() => { console.log('signout'); setLoading(false); setUser(null) }).catch(e => { console.log(e.message); setLoading(false) })
+        logOut().then(() => { console.log('signout'); setLoading(false); setUser(null) }).catch(e => { console.log(e.message); setLoading(false) })
     }
     const menu = <>
         <li> <Link className="rounded-none text-slate-50 font-bold border-b-0 hover:!text-[#A855F7] hover:border-[#A855F7] hover:border-b-2 transition duration-300 focus:!text-[#A855F7] " to={'/'}>Home</Link> </li>
