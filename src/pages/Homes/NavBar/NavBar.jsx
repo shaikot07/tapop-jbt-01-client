@@ -42,7 +42,7 @@ const NavBar = () => {
                 {/* <li> <Link className="rounded-none text-slate-50 font-bold hover:!text-[#A855F7]  hover:border-[#A855F7] hover:border-b-2 transition duration-300" to={'/register'}>Sign up</Link> </li> */}
             </>
                 : <>
-                    <li> <Link className="rounded-none text-slate-50 font-bold hover:!text-[#A855F7]  hover:border-[#A855F7] hover:border-b-2 transition duration-300 focus:!text-[#A855F7]" to={'/my-task'}>My Team</Link> </li>
+                    {/* <li> <Link className="rounded-none text-slate-50 font-bold hover:!text-[#A855F7]  hover:border-[#A855F7] hover:border-b-2 transition duration-300 focus:!text-[#A855F7]" to={'/my-task'}>My Team</Link> </li> */}
                     <li> <Link className="rounded-none text-slate-50 font-bold hover:!text-[#A855F7]  hover:border-[#A855F7] hover:border-b-2 transition duration-300 focus:!text-[#A855F7]" to={'/login'}>Log In</Link> </li>
                     <li> <Link className="rounded-none text-slate-50 font-bold hover:!text-[#A855F7]  hover:border-[#A855F7] hover:border-b-2 transition duration-300 focus:!text-[#A855F7]" to={'/register'}>Sign up</Link> </li>
                 </>
