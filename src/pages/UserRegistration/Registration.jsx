@@ -30,7 +30,7 @@ const Registration = () => {
     // If user not exist, then redirect to homepage
     useEffect(() => {
         if (user) {
-            return navigate("/");
+            return navigate("/home");
         }
     }, [user]);
 

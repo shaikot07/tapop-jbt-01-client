@@ -4,15 +4,17 @@ import UserProfile from "../../User/UserProfile";
 
 
 const Home = () => {
-    const [allUsers]=useAllUser()
-    console.log("from all users",allUsers);
+    const [allUsers] = useAllUser()
+    console.log("home from all users", allUsers);
 
     return (
         <div>
-            <h2 className="text-4xl text-red-600">this is a home pages</h2>
+            <h2 className="text-4xl text-red-600">Well Come To This Site</h2>
 
-            <div className="h-[800px] w-full bg-slate-500">
-                <UserProfile allUsers={allUsers._id}></UserProfile>
+            <div className="h-[800px] max-w-6xl mx-auto bg-slate-500">
+                <UserProfile userId={allUsers && allUsers.length > 0 ? allUsers[0]._id : null}></UserProfile>
+
+
             </div>
 
         </div>
