@@ -10,8 +10,9 @@ const Home = () => {
     return (
         <div>
             <h2 className="text-4xl text-red-600">Well Come To This Site</h2>
-
+            <h3 className="text-4xl bg-purple-800">{allUsers.displayName}</h3>
             <div className="h-[800px] max-w-6xl mx-auto bg-slate-500">
+               
                 <UserProfile userId={allUsers && allUsers.length > 0 ? allUsers[0]._id : null}></UserProfile>
 
 
