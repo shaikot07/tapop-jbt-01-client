@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import  { useState, useEffect } from 'react';
 import QRScanner from 'react-qr-scanner';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
 import QRCode from 'react-qr-code';
@@ -49,9 +50,9 @@ const UserProfile = ({ userId }) => {
 
     return (
         <div className="flex flex-col items-center justify-center  w-full">
-            <p>Please Scan For Get Info</p>
+            <p>Please Scan For Get All Info</p>
             {isLoading ? (
-                <p className="text-xl font-bold text-blue-600">Loading QR code...</p>
+                <p className="text-xl font-bold text-blue-600">Loading QR code....</p>
             ) : (
                 <>
                     <div className='h-[300px] max-w-5xl mx-auto'>

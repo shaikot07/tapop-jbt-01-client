@@ -5,7 +5,7 @@ import UserProfile from "../../User/UserProfile";
 
 const Home = () => {
     const [allUsers] = useAllUser()
-    console.log("home from all users", allUsers);
+    // console.log("home from all users", allUsers);
 
     return (
         <div>
